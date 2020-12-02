@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 const dataset = fs
-	.readFileSync('./day-2.input')
+	.readFileSync('./2inp')
 	.toString()
 	.split('\n')
 	.filter(Boolean)

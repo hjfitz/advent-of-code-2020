@@ -2,7 +2,7 @@ const fs = require('fs')
 
 const SUM_TO_MAKE = 2020
 
-const input = fs.readFileSync('./day-1.input')
+const input = fs.readFileSync('./1-inp')
 	.toString()
 	.split('\n')
 	.filter(Boolean)
