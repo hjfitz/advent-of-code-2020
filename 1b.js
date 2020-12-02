@@ -4,17 +4,19 @@ const fs = require('fs')
 
 const SUM_TO_MAKE = 2020
 
-const input = fs.readFileSync('./day-1.input')
+const input = fs.readFileSync('./1-inp')
 	.toString()
 	.split('\n')
 	.filter(Boolean)
 	.map((num) => parseInt(num, 10))
 
-function findSumNumbers(goal, numbers, totalNums) {
-	const candidates = input.map((num) => ({
-		num,
-		requiredNum: (SUM_TO_MAKE - num),
-	})).filter((obj) => input.includes(obj.requiredNum))
+for (const num1 of input) {
+	for (const num2 of input) {
+		for (const num3 of input) {
+			if (num1 + num2 + num3 === SUM_TO_MAKE) {
+				console.log(num1 * num2 * num3)
+				return
+			}
+		}
+	}
 }
-
-findSumNumbers(SUM_TO_MAKE, [], 3)
